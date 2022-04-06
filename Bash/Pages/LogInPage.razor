@@ -1,32 +1,59 @@
-﻿@page  "/LogIn"
+﻿@page  "/logIn"
 <h3>Добро пожаловать!</h3>
 
-
-Имя
-<br />
-<input type="text" id="NameS" @bind="@name" />
-<br />
-<br />
-Фамилия
-<br />
-<input type="text" id="SurnameS" @bind="@surname" />
-<br />
-<br />
-Телефон
-<br />
-<input type="number" id="GroupS" @bind="@group" />
-<br />
-<br />
-<button class="btn btn-primary">Добавить</button>
-
+<form class="form-inline row align-items-start">
+    <div class="col">
+        <br />
+        <h5>Вход</h5>
+        <br />
+        Пароль
+        <br />
+        <input type="password" id="Pass" @bind="@pass" />
+        <br />
+        <br />
+        Телефон
+        <br />
+        <input type="number" id="Phone" @bind="@phone" />
+        <br />
+        <br />
+        <button class="btn btn-warning">Войти</button>
+    </div>
+    <div class="col">
+        <br />
+        <h5>Регистрация</h5>
+        <br />
+        Имя
+        <br />
+        <input type="text" id="Name" @bind="@name" />
+        <br />
+        <br />
+        Фамилия
+        <br />
+        <input type="text" id="Surname" @bind="@surname" />
+        <br />
+        <br />
+        Отчество
+        <br />
+        <input type="text" id="Middlename" @bind="@middlename" />
+        <br />
+        <br />
+        Телефон
+        <br />
+        <input type="number" id="Phone" @bind="@phone" />
+        <br />
+        <br />
+        Пароль
+        <br />
+        <input type="password" id="Pass" @bind="@pass" />
+        <br />
+        <br />
+        <button class="btn btn-warning">Зарегистрироваться</button>
+    </div>
+</form>
 @code {
-    //public static List<Students> stud;
     string name;
     string surname;
-    int group;
-    //public void Add()
-    //{
-    //    Students.AddToList(name, surname, group);
-
-    //}
+    string middlename;
+    int phone;
+    string pass;
 }
